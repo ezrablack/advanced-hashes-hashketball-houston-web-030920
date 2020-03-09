@@ -242,17 +242,3 @@ team_member = ""
   return team_member
 end
 
-def winning_team
-  total_points = 0 
-  game.each do |location, team_info|
-    team_info[:players].each do |player|
-      points = player[:stats][:points]
-      score = 0
-      while score < points do
-        total_points += points
-        score += 1 
-      end
-    end  
-  end      
-  return total_points
-end
